@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sunfish-robotics/ulog/pkg/wire"
+	"github.com/infin-robotics/ulog/pkg/wire"
 )
 
 func TestWriterRejectsInitialMetadataAfterDataStarts(t *testing.T) {

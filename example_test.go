@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sunfish-robotics/ulog"
+	"github.com/infin-robotics/ulog"
 )
 
 func ExampleReader() {

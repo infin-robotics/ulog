@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sunfish-robotics/ulog/pkg/wire"
+	"github.com/infin-robotics/ulog/pkg/wire"
 )
 
 // Header contains the ULog version and the logging start time from the fixed
