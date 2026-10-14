@@ -3,6 +3,7 @@
   "bootstrap-sha": "d90240e04fbd261171290097b1633c283c52c431",
   "release-type": "go",
   "include-component-in-tag": false,
+  "bump-minor-pre-major": true,
   "always-update": true,
   "packages": {
     ".": {
