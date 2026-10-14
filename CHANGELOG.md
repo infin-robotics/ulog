@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.0](https://github.com/infin-robotics/ulog/compare/v0.3.0...v1.0.0) (2026-10-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* consumers must import github.com/infin-robotics/ulog. Public APIs and runtime behaviour are unchanged.
+
+### Features
+
+* read appended data sections ([14206a2](https://github.com/infin-robotics/ulog/commit/14206a2770ccb788ec445cf28ba25be379414721))
+* read appended data sections ([515729d](https://github.com/infin-robotics/ulog/commit/515729d14d77a086e98a23e4809cde67f0992113))
+
+
+### Code Refactoring
+
+* migrate ulog module to infin-robotics ([fdf6cba](https://github.com/infin-robotics/ulog/commit/fdf6cba93e0bef4c1b3e1b431256a432d5fcd82c))
+
 ## [0.3.0](https://github.com/sunfish-robotics/ulog/compare/v0.2.0...v0.3.0) (2026-08-27)
 
 
