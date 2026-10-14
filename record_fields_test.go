@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sunfish-robotics/ulog/pkg/wire"
+	"github.com/infin-robotics/ulog/pkg/wire"
 )
 
 func TestRecordFieldsReturnsFlattenedScalarSchema(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/sunfish-robotics/ulog"
-	"github.com/sunfish-robotics/ulog/pkg/columnar"
-	"github.com/sunfish-robotics/ulog/pkg/dataset"
+	"github.com/infin-robotics/ulog"
+	"github.com/infin-robotics/ulog/pkg/columnar"
+	"github.com/infin-robotics/ulog/pkg/dataset"
 )
 
 type sample struct {

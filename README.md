@@ -7,7 +7,7 @@
 A pure-Go reader, writer, and analysis library for [the PX4 ULog format][reference]. It reads file-defined schemas dynamically, with reflection and generics available as optional conveniences for Go types.
 
 ```console
-go get github.com/sunfish-robotics/ulog
+go get github.com/infin-robotics/ulog
 ```
 
 ## Usage
@@ -51,12 +51,12 @@ Multi-information, default-parameter, and tagged-log writing are available at th
 
 This project is released under the [Apache License, Version 2.0](LICENSE).
 
-[ci]: https://github.com/sunfish-robotics/ulog/actions/workflows/ci.yml
-[ci-badge]: https://github.com/sunfish-robotics/ulog/actions/workflows/ci.yml/badge.svg
-[go-reference]: https://pkg.go.dev/github.com/sunfish-robotics/ulog
-[dataset-reference]: https://pkg.go.dev/github.com/sunfish-robotics/ulog/pkg/dataset
-[columnar-reference]: https://pkg.go.dev/github.com/sunfish-robotics/ulog/pkg/columnar
+[ci]: https://github.com/infin-robotics/ulog/actions/workflows/ci.yml
+[ci-badge]: https://github.com/infin-robotics/ulog/actions/workflows/ci.yml/badge.svg
+[go-reference]: https://pkg.go.dev/github.com/infin-robotics/ulog
+[dataset-reference]: https://pkg.go.dev/github.com/infin-robotics/ulog/pkg/dataset
+[columnar-reference]: https://pkg.go.dev/github.com/infin-robotics/ulog/pkg/columnar
 [license]: LICENSE
 [license-badge]: https://img.shields.io/badge/license-Apache--2.0-blue.svg
 [reference]: https://docs.px4.io/main/en/dev_log/ulog_file_format
-[reference-badge]: https://pkg.go.dev/badge/github.com/sunfish-robotics/ulog.svg
+[reference-badge]: https://pkg.go.dev/badge/github.com/infin-robotics/ulog.svg

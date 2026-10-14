@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/sunfish-robotics/ulog"
+	"github.com/infin-robotics/ulog"
 )
 
 // File owns the datasets and metadata loaded from one complete ULog stream.

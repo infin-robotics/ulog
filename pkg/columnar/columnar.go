@@ -14,8 +14,8 @@ import (
 	"github.com/apache/arrow-go/v18/arrow/array"
 	"github.com/apache/arrow-go/v18/arrow/memory"
 
-	"github.com/sunfish-robotics/ulog"
-	"github.com/sunfish-robotics/ulog/pkg/dataset"
+	"github.com/infin-robotics/ulog"
+	"github.com/infin-robotics/ulog/pkg/dataset"
 )
 
 // ToArrow converts source into one Arrow record batch. The caller owns the

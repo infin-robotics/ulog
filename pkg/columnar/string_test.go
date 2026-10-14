@@ -14,9 +14,9 @@ import (
 	parquetfile "github.com/apache/arrow-go/v18/parquet/file"
 	"github.com/apache/arrow-go/v18/parquet/pqarrow"
 
-	"github.com/sunfish-robotics/ulog"
-	"github.com/sunfish-robotics/ulog/pkg/dataset"
-	"github.com/sunfish-robotics/ulog/pkg/wire"
+	"github.com/infin-robotics/ulog"
+	"github.com/infin-robotics/ulog/pkg/dataset"
+	"github.com/infin-robotics/ulog/pkg/wire"
 )
 
 func TestToArrowMapsCharacterArraysToStrings(t *testing.T) {

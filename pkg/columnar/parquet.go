@@ -10,8 +10,8 @@ import (
 	parquet "github.com/parquet-go/parquet-go"
 	parquetcompress "github.com/parquet-go/parquet-go/compress"
 
-	"github.com/sunfish-robotics/ulog"
-	"github.com/sunfish-robotics/ulog/pkg/dataset"
+	"github.com/infin-robotics/ulog"
+	"github.com/infin-robotics/ulog/pkg/dataset"
 )
 
 // Compression identifies a Parquet compression codec. Compression applies to

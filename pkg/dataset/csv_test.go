@@ -7,9 +7,9 @@ import (
 	"math"
 	"testing"
 
-	"github.com/sunfish-robotics/ulog"
-	"github.com/sunfish-robotics/ulog/pkg/dataset"
-	"github.com/sunfish-robotics/ulog/pkg/wire"
+	"github.com/infin-robotics/ulog"
+	"github.com/infin-robotics/ulog/pkg/dataset"
+	"github.com/infin-robotics/ulog/pkg/wire"
 )
 
 type csvSample struct {

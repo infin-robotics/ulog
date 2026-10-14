@@ -1,4 +1,4 @@
-module github.com/sunfish-robotics/ulog
+module github.com/infin-robotics/ulog
 
 go 1.25.0
 

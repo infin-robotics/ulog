@@ -19,6 +19,6 @@
 // loads a complete file into typed columns, and package [columnar] converts
 // those datasets to Apache Arrow or Parquet.
 //
-// [dataset]: https://pkg.go.dev/github.com/sunfish-robotics/ulog/pkg/dataset
-// [columnar]: https://pkg.go.dev/github.com/sunfish-robotics/ulog/pkg/columnar
+// [dataset]: https://pkg.go.dev/github.com/infin-robotics/ulog/pkg/dataset
+// [columnar]: https://pkg.go.dev/github.com/infin-robotics/ulog/pkg/columnar
 package ulog

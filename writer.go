@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/sunfish-robotics/ulog/pkg/wire"
+	"github.com/infin-robotics/ulog/pkg/wire"
 )
 
 // WriterOption configures [NewWriter].

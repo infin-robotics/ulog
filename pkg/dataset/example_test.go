@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sunfish-robotics/ulog/pkg/dataset"
+	"github.com/infin-robotics/ulog/pkg/dataset"
 )
 
 func ExampleRead() {
