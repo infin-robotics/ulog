@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/apache/arrow-go/v18 v18.7.0
-	github.com/parquet-go/parquet-go v0.29.0
+	github.com/parquet-go/parquet-go v0.32.0
 )
 
 require (

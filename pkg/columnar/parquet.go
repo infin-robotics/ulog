@@ -111,31 +111,39 @@ func WriteParquet(destination io.Writer, source *dataset.Dataset, options ...Par
 		group[column.Name()] = parquet.Optional(node)
 	}
 
-	rows := make([]map[string]any, source.Len())
+	schema := parquet.NewSchema("schema", group)
+	// Group orders fields by name, which can differ from Dataset's wire order.
+	// Every schema leaf is a flattened, optional scalar from source.Columns().
+	for columnIndex, path := range schema.Columns() {
+		columns[columnIndex], _ = source.Column(path[0])
+	}
+	rows := make([]parquet.Row, source.Len())
 	for rowIndex := range rows {
-		row := make(map[string]any, len(columns))
-		for _, column := range columns {
+		row := make(parquet.Row, len(columns))
+		for columnIndex, column := range columns {
 			value, valid := column.Value(rowIndex)
 			if !valid {
+				row[columnIndex] = parquet.NullValue().Level(0, 0, columnIndex)
 				continue
 			}
 			if text, ok := value.(string); ok && !utf8.ValidString(text) {
 				return fmt.Errorf("column %q row %d is not valid UTF-8", column.Name(), rowIndex)
 			}
-			row[column.Name()] = value
+			// Encode presence explicitly: valid zero values are not null.
+			row[columnIndex] = parquet.ValueOf(value).Level(0, 1, columnIndex)
 		}
 		rows[rowIndex] = row
 	}
 
-	writer := parquet.NewGenericWriter[map[string]any](
+	writer := parquet.NewWriter(
 		destination,
-		parquet.NewSchema("schema", group),
+		schema,
 		parquet.Compression(config.compression),
 	)
 	writer.SetKeyValueMetadata("ulog.format", source.Name())
 	writer.SetKeyValueMetadata("ulog.format_definition", source.Format().String())
 	writer.SetKeyValueMetadata("ulog.multi_id", strconv.FormatUint(uint64(source.MultiID()), 10))
-	if _, err := writer.Write(rows); err != nil {
+	if _, err := writer.WriteRows(rows); err != nil {
 		return errors.Join(fmt.Errorf("write Parquet table: %w", err), writer.Close())
 	}
 	if err := writer.Close(); err != nil {
