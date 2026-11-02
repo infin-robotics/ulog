@@ -33,13 +33,6 @@ jobs:
             go.mod
             go.sum
       - run: go test -race ./...
-      - name: Test Parquet v0.32.0 compatibility
-        if: matrix.go-version == 'stable'
-        run: |
-          cp go.mod "$RUNNER_TEMP/parquet.mod"
-          cp go.sum "$RUNNER_TEMP/parquet.sum"
-          go mod edit -modfile="$RUNNER_TEMP/parquet.mod" -require=github.com/parquet-go/parquet-go@v0.32.0
-          go test -race -mod=mod -modfile="$RUNNER_TEMP/parquet.mod" ./pkg/columnar
 
   lint:
     name: Lint

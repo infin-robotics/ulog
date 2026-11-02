@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding"
 	"encoding/binary"
+	"errors"
 	"io"
 	"testing"
 
@@ -49,7 +50,7 @@ func TestWriteParquetPreservesPresentZerosAndMissingValues(t *testing.T) {
 			}()
 			rows := make([]parquet.Row, source.Len())
 			n, err := reader.ReadRows(rows)
-			if err != nil && err != io.EOF {
+			if err != nil && !errors.Is(err, io.EOF) {
 				t.Fatalf("ReadRows() error = %v", err)
 			}
 			if n != source.Len() {
