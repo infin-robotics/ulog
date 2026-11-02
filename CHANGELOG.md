@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.1](https://github.com/infin-robotics/ulog/compare/v0.4.0...v0.4.1) (2026-11-02)
+
+
+### Bug Fixes
+
+* **columnar:** preserve present zero values in Parquet output ([5c1a89a](https://github.com/infin-robotics/ulog/commit/5c1a89a6f3e58ed5637b522490f9f7fb077f442f))
+* **columnar:** preserve present zero values in Parquet output ([a99b478](https://github.com/infin-robotics/ulog/commit/a99b478d3de6eb2bd4b56996aa3e828e224846a2))
+* use Parquet v0.32.0 in the normal test suite ([e3ce239](https://github.com/infin-robotics/ulog/commit/e3ce2395d30dcd2f89b2fba8b16a22baf7e8a763))
+
 ## [0.4.0](https://github.com/infin-robotics/ulog/compare/v0.3.0...v0.4.0) (2026-10-14)
 
 
